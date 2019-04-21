@@ -7,3 +7,4 @@ description = ""
 
 此处记录我们的管理、规范及文档成果。
 
+{{< dochome >}}

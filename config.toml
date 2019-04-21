@@ -1,5 +1,5 @@
-baseurl = "//v0-15.choerodon.io/"
-title = "Choerodon | 开源多云应用平台"
+baseurl = "//hcdtc.github.io/"
+title = "汉得中台成都远程中心 | 中台远程交付团队"
 theme = "choerodon-document-theme"
 # themesDir = "../.."
 # Site language. Available translations in the theme's `/i18n` directory.
