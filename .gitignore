@@ -29,3 +29,6 @@ gitlabci/.generated
 
 # build
 public/
+
+node_modules
+package-lock.json
