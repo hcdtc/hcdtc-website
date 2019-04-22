@@ -1,7 +1,7 @@
 +++
 title = "Hugo框架指引"
 description = ""
-weight = 30
+weight = 2
 icon = ""
 home = true
 +++
@@ -68,6 +68,27 @@ hugo编译后生成网站的所有文件都存储在这里面，把这个目录�
 - hugo server --buildDrafts：hugo server如果没有带参数，默认在当前目录寻找config.toml，如果没有config.toml，命令中就需要带很多参数。--buildDrafts意为“编译草稿（draft: true的Markdown文件）”
 - hugo --buildDrafts：生成可发布的静态html。如果没有指定路径，默认在当前路径下新建public。如果在config.toml中指定了publicdir参数，则默认到该路径下，注意路径的斜杠问题。
 
+## 部署
+
+假设你需要部署在 `GitHub Pages` 上，首先在GitHub上创建一个Repository，命名为：`coderzh.github.io` （coderzh替换为你的github用户名）。
+
+在站点根目录执行 Hugo 命令生成最终页面：
+```
+$ hugo --theme=hyde --baseUrl="http://coderzh.github.io/"
+```
+（注意，以上命令并不会生成草稿页面，如果未生成任何文章，请去掉文章头部的 draft=true 再重新生成。）
+
+如果一切顺利，所有静态页面都会生成到 public 目录，将pubilc目录里所有文件 push 到刚创建的Repository的 master 分支。
+```
+$ cd public
+$ git init
+$ git remote add origin https://github.com/coderzh/coderzh.github.io.git
+$ git add -A
+$ git commit -m "first commit"
+$ git push -u origin master
+```
+浏览器里访问：http://coderzh.github.io/
+
 ## 页面配置
 
 **front matter** 
@@ -90,7 +111,7 @@ weight = 20
 * 本地启动命令： hugo server | 浏览器里打开： http://localhost:1313
 * 目录结构及目录名规则： docs 目录下创建 xx(number)-xxx， _index.md 中 weight 为目录权重， 从 1 开始，越小权重越大。
 * _index.md 内关联下级菜单
-    * `{{< `docdir` >}}` 功能模板 | 此代码为短代码（shortcodes）相当于一些自定义模版，通过在md文档中引用，生成代码片段，类似于一些js框架中的组件。
+    * \{\{\< docdir \>\}\} 功能模板 | 此代码为短代码（shortcodes）相当于一些自定义模版，通过在md文档中引用，生成代码片段，类似于一些js框架中的组件。
     *  `- [**xxx**](../xxx/xxx) 描述性文字。` 非功能模板关联菜单
 * 图片引用
     * 在config.toml中配置baseurl | 作用是无论在本地还是发布出去，图片的路径都是相对于baseurl
