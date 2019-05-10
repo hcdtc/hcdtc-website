@@ -12,7 +12,7 @@ weight = 1
 
 大多数表格查询页面由上方的查询表单及下方的表格组成，对于常见的超过3个查询条件的表单编码示例如下：
 
-注意：代码中引用的常量均来自`utils/constants`文件中定义的各类布局常用值。
+注意：代码中引用的常量均来自`utils/constants`文件中定义的各类布局常用值，可在本文档[页面布局常量](../index_constants)中查看。
 ```
        ...
        <Form layout="inline" className="more-fields-search-form">
