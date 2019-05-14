@@ -10,3 +10,5 @@ home = true
 本文档详细介绍了Spring系列框架解析，Spring、Spring Boot、Spring Cloud等。
 
 主要分为以下几个部分：
+
+{{< docdir >}}
