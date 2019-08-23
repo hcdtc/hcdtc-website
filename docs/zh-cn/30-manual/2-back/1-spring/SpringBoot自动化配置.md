@@ -14,7 +14,7 @@
 
 3. @ComponentScan
 
-```
+```java
 package org.springframework.boot.autoconfigure;
 
 import ...;
@@ -67,7 +67,7 @@ public @interface SpringBootApplication {
 @EnableAutoConfiguration -> EnableAutoConfigurationImportSelector（@Import注解） -> AutoConfigurationImportSelector（父类加载配置类时，指定getSpringFactoriesLoaderFactoryClass为EnableAutoConfiguration.class-也即@EnableAutoConfiguration ，并调用SpringFactoriesLoader.loadFactoryNames方法加载配置文件） --> SpringFactoriesLoader（加载"META-INF/spring.factories"中属性Key为EnableAutoConfiguration.class完整类名的配置类定义） -> "META-INF/spring.factories"；
 
 1、查看复合注解定义
-```
+```java
 package org.springframework.boot.autoconfigure;
 
 import java.lang.annotation.Documented;
@@ -95,7 +95,7 @@ public @interface EnableAutoConfiguration {
 }
 ```
 2、重点关注下Import注解
-```
+```java
 package org.springframework.boot.autoconfigure;
 
 import org.springframework.boot.autoconfigure.AutoConfigurationImportSelector;
@@ -113,7 +113,7 @@ public class EnableAutoConfigurationImportSelector extends AutoConfigurationImpo
 }
 ```
 3、向上延伸查看父类
-```
+```java
 //
 // Source code recreated from a .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
@@ -186,7 +186,7 @@ public class AutoConfigurationImportSelector implements DeferredImportSelector, 
 ```
 
 4、查看SpringFactoriesLoader
-```
+```java
 //
 // Source code recreated from a .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
