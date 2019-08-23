@@ -55,7 +55,7 @@
       repo: 'hcdtc-website',
       owner: 'hcdtc', // 需要是仓库的拥有者，否则报错：Error: Not Found.
       admin: ['hcdtc'],
-      id: md5(window.location.pathname), // 不允许超过50个字符，否则报错：Error: Validation Failed.
+      id: md5(window.location.href), // 不允许超过50个字符，否则报错：Error: Validation Failed.
       // facebook-like distraction free mode
       distractionFreeMode: false
     })
