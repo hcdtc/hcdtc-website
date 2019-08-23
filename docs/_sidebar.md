@@ -42,6 +42,7 @@
         * [git](zh-cn/30-manual/3-tools/git)
         * [idea](zh-cn/30-manual/3-tools/idea)
 * [团队文档](zh-cn/80-team/团队文档)
+    * [Docsify指南](zh-cn/80-team/Docsify指南)
     * [Hugo指南](zh-cn/80-team/Hugo指南)
     * [Markdown指南](zh-cn/80-team/Markdown指南)
 * [代码复查](zh-cn/90-code-review/代码复查)
