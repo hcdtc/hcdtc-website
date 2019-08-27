@@ -40,6 +40,7 @@
       formatUpdated: '{MM}/{DD} {HH}:{mm}',
 
       plugins: [
+        // 控制侧边栏菜单默认展开层级，以及手动收起及展开菜单插件
         function (hook) {
           hook.doneEach(function () {
 
@@ -102,12 +103,14 @@
   <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script>
   <script src="//unpkg.com/docsify-copy-code"></script>
-  <script src="https://cdn.bootcss.com/blueimp-md5/2.11.1/js/md5.min.js"></script>
-  <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
-  <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+  <!-- 暂时取消Gitalk功能 -->
+  <!--
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.11.1/js/md5.min.js"></script>
+  <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
   <script>
     const gitalk = new Gitalk({
       clientID: '7a9fb9893c0c65496c58',
@@ -120,5 +123,6 @@
       distractionFreeMode: false,
     })
   </script>
+  -->
 </body>
 </html>
