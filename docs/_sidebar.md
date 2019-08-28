@@ -52,6 +52,7 @@
     - [邮件须知](zh-cn/70-pm/邮件须知)
     - [汇报邮件](zh-cn/70-pm/汇报邮件)
     - [汇报邮件-模板](zh-cn/70-pm/汇报邮件-模板.html)
+    - [项目初始化](zh-cn/70-pm/项目初始化)
 - [团队管理](zh-cn/80-team)
     - [团队管理制度](zh-cn/80-team/团队管理制度)
     - [Docsify指南](zh-cn/80-team/Docsify指南)
