@@ -1,6 +1,8 @@
 - [概览](zh-cn/10-overview)
     - [团队介绍](zh-cn/10-overview/团队介绍)
     - [贡献指南](zh-cn/10-overview/贡献指南)
+- [创意](zh-cn/11-idea)
+    - [创意·北极星](zh-cn/11-idea/创意·北极星)
 - [开发规范](zh-cn/20-spec)
     - [基础开发规范](zh-cn/20-spec/1-basic)
         - [分支管理](zh-cn/20-spec/1-basic/分支管理)
