@@ -44,6 +44,23 @@
         function (hook) {
           hook.doneEach(function () {
 
+            // 提示输入密码
+            const defaultPasswordWithMd5InUpperCase = "610FC3EA299132689A1B435AC6B44B69";
+            while (true) {
+              const password = window.localStorage.getItem("X-Password");
+              if (password && password.length > 0 && md5(password).toUpperCase() === defaultPasswordWithMd5InUpperCase) {
+                break;
+              }
+
+              // 要求输入密码
+              const userEnteredPassword = prompt("请输入密码：");
+              if (userEnteredPassword && userEnteredPassword.length > 0 && md5(userEnteredPassword).toUpperCase() === defaultPasswordWithMd5InUpperCase) {
+                window.localStorage.setItem("X-Password", userEnteredPassword);
+                break;
+              }
+            }
+            // End
+
             let max_cengji = 1; //默认展开层级深度
             // 存在子节点则添加箭头
             $('.sidebar-nav').find('li>a').each(function (i, e) {
@@ -108,6 +125,9 @@
   <script src="//unpkg.com/prismjs/components/prism-sql.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- 登录 -->
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.11.1/js/md5.min.js"></script>
 
   <!-- 暂时取消Gitalk功能 -->
   <!--
