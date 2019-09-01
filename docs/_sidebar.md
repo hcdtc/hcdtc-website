@@ -72,6 +72,7 @@
     - [能力清单](zh-cn/83-ability/能力清单)
 - [团队管理-4职业规划](zh-cn/84-goal)
     - [吴星星](zh-cn/84-goal/吴星星)
+    - [王柯](zh-cn/84-goal/王柯)
     - [张建](zh-cn/84-goal/张建)
 - [团队管理-5总结分享](zh-cn/85-share)
     - [总结分享](zh-cn/85-share/总结分享)
