@@ -65,7 +65,7 @@
     - [张建](zh-cn/81-basic/张建)
 - [团队管理-2项目信息](zh-cn/82-project)
     - [项目信息](zh-cn/82-project/项目信息)
-    - [张建-项目信息](zh-cn/82-project/张建)
+    - [张建](zh-cn/82-project/张建)
 - [团队管理-3能力清单](zh-cn/83-ability)
     - [能力清单](zh-cn/83-ability/能力清单)
 - [团队管理-4职业规划](zh-cn/84-goal)
