@@ -70,6 +70,7 @@
     - [张建](zh-cn/82-project/张建)
     - [王柯](zh-cn/82-project/王柯)
     - [虎翎芳子-项目信息](zh-cn/82-project/虎翎芳子)
+    - [吴星星](zh-cn/82-project/吴星星)
 - [团队管理-3能力清单](zh-cn/83-ability)
     - [能力清单](zh-cn/83-ability/能力清单)
 - [团队管理-4职业规划](zh-cn/84-goal)
