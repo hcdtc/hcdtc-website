@@ -263,3 +263,6 @@ public abstract class SpringFactoriesLoader {
     }
 }
 ```
+
+## 自动化配置类汇总
+参考：[自动化配置类汇总](https://docs.spring.io/spring-boot/docs/current/reference/html/auto-configuration-classes.html)
