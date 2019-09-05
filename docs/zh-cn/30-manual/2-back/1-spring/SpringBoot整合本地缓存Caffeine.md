@@ -11,8 +11,7 @@
 
 [Caffeine](https://github.com/ben-manes/caffeine)是一款基于Java 8的高性能缓存库，提供了近似最佳的命中率；Spring 4.3 & Boot 1.4中用Caffeine取代了Guava。
 
-## Spring Boot整合
-### 引入依赖
+## 引入依赖
 实际上caffeine等均已经在`org.springframework.boot:spring-boot-dependencies:pom:2.0.6.RELEASE`中做了依赖管理，此处不需要指定版本，其是`org.springframework.boot:spring-boot-starter-parent:pom:2.0.6.RELEASE`的父级POM，也是所有Spring Boot项目的顶级POM。
 > `spring-boot-starter-actuator`是为后续对Cache监控而引入的
 
@@ -32,7 +31,7 @@
 </dependency>
 ```
 
-### 方案一：Yml配置
+## 方案一：Yml配置
 - 如果Caffeine存在，则`CaffeineCacheManager`(由`spring-boot-starter-cache`"Starter"提供)将会自动配置。
 - 通过设置`spring.cache.cache-names`将会在服务启动时自动创建缓存
 - 同时可以通过如下几种方式客户化缓存特性，优先级如下
@@ -45,7 +44,7 @@ spring.cache.cache-names=cache1,cache2
 spring.cache.caffeine.spec=maximumSize=500,expireAfterAccess=600s
 ```
 
-### 方案二：代码实现
+## 方案二：代码实现
 - 增加配置类
     - 首先通过`@EnableCaching`开启缓存
     - 通过`enum`手动定义缓存配置，具体Caffeine的缓存配置项可以参考`com.github.benmanes.caffeine.cache.CaffeineSpec`或者`com.github.benmanes.caffeine.cache.Caffeine`
@@ -121,7 +120,7 @@ public class CaffeineCacheConfiguration {
 }
 ```
 
-### 缓存使用
+## 缓存使用
 - `@Cacheable`中`value`与如上配置中缓存的名称保持一致；`key`为缓存的Key值，可通过SPEL表达式获取方法及参数的相关信息；
 - `@CacheEvict`定义了缓存的淘汰策略，例如，此处传入了参数`refresh`
 ```java
@@ -156,10 +155,10 @@ public class CaffeineCacheConfiguration {
     }
 ```
 
-### 缓存验证
+## 缓存验证
 可通过两次请求的LOGGER日志观察，第一次将会打印方法的第一条日志，第二次启用缓存之后，将不会再打印日志。
 
-### 缓存监控
+## 缓存监控
 只要开启metrics管理端点，则缓存的自动化配置将会自动纳入到Metrics的管理(默认包含了Caffeine缓存，具体可参考自动化配置[org.springframework.boot.actuate.autoconfigure.metrics.cache.CacheMetricsAutoConfiguration](https://github.com/spring-projects/spring-boot/blob/master/spring-boot-project/spring-boot-actuator-autoconfigure/src/main/java/org/springframework/boot/actuate/autoconfigure/metrics/cache/CacheMetricsAutoConfiguration.java))，因此，只需要开启Metrics的运维端点即可使用。
 > Metrics指标参考：[Spring Boot默认指标从哪来？](https://www.cnblogs.com/liululee/p/11410493.html)
 
@@ -172,6 +171,8 @@ management:
       exposure:
         include: info,health,monitoring,metrics,caches
 ```
+
+> 实践看来：Spring Boot 2.0.6.RELEASE版本配置`include: '*'`似乎无法生效，因此，单独配置各个端点。
 
 http://localhost:8151/actuator/metrics
 ```json
@@ -231,7 +232,7 @@ http://localhost:8151/actuator/metrics/cache.gets
 }
 ```
 
-### 如何关闭缓存监控端点
+## 如何关闭缓存监控端点
 - 目前无法关闭特定Metrics指标，只能启用/关闭特定端点，例如，如下Spring Boot配置
 ```yaml
 management.endpoints.autoconfig.enabled=false

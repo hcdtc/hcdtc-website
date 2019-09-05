@@ -29,6 +29,7 @@
             - [SpringBoot条件配置](zh-cn/30-manual/2-back/1-spring/SpringBoot条件配置)
             - [SpringBoot自动化配置](zh-cn/30-manual/2-back/1-spring/SpringBoot自动化配置)
             - [SpringBoot整合本地缓存Caffeine](zh-cn/30-manual/2-back/1-spring/SpringBoot整合本地缓存Caffeine)
+            - [SpringBoot整合JavaMelody](zh-cn/30-manual/2-back/1-spring/SpringBoot整合JavaMelody)
         - [MyBatis](zh-cn/30-manual/2-back/2-mybatis)
             - [简介](zh-cn/30-manual/2-back/2-mybatis/MyBatis)
         - [工具类](zh-cn/30-manual/2-back/3-utils)
