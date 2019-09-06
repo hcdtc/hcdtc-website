@@ -47,6 +47,8 @@
                 - [BooleanUtils](zh-cn/30-manual/2-back/3-utils/commons-lang3/9-BooleanUtils)
                 - [RandomUtils](zh-cn/30-manual/2-back/3-utils/commons-lang3/10-RandomUtils)
             - [commons-codec](zh-cn/30-manual/2-back/3-utils/commons-codec)
+        - [设计模式](zh-cn/30-manual/2-back/4-design-patterns)
+            - [建造者模式](zh-cn/30-manual/2-back/4-design-patterns/builder)
     - [开发工具](zh-cn/30-manual/3-tools)
         - [开发工具](zh-cn/30-manual/3-tools/开发工具)
         - [git](zh-cn/30-manual/3-tools/git)
