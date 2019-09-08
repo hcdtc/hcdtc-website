@@ -71,6 +71,7 @@
     - [王柯](zh-cn/81-basic/王柯)
     - [张建](zh-cn/81-basic/张建)
     - [虎翎芳子](zh-cn/81-basic/虎翎芳子)
+	- [李建波](zh-cn/81-basic/李建波)
 - [团队管理-2项目信息](zh-cn/82-project)
     - [项目信息](zh-cn/82-project/项目信息)
     - [张建](zh-cn/82-project/张建)
