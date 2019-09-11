@@ -163,7 +163,58 @@ modalVisible: false
  * @Copyright: Copyright (c) 2018, Hand
  */
 ```
-* 其他注释规范参考[Hzero]([http://hzerodoc.saas.hand-china.com/zh/docs/development-specification/font-development-specification/specification/comment/](http://hzerodoc.saas.hand-china.com/zh/docs/development-specification/font-development-specification/specification/comment/))
+
+* 其他注释规范参考[Hzero](http://hzerodoc.saas.hand-china.com/zh/docs/development-specification/font-development-specification/specification/comment/）
+
+## git提交规范
+
+```shell
+[操作][:][空格][commit内容]
+```
+
+`[commit内容]`请详细填写具体的文件新增/修改/删除操作过程
+
+例如
+
+```shell
+fix: 修复查询功能bug
+```
+
+* 操作标识符
+
+```shell
+fix：修复bug
+feat：更新/新增文件/新特性
+modify：重命名
+delete：删除文件
+docs: 文档调整补充
+```
+
+patches:
+
+```bash
+$ git commit -a -m "fix(parsing): fixed a bug in our parser"
+```
+
+features:
+
+```bash
+$ git commit -a -m "feat(parser): we now have a parser \o/"
+```
+
+breaking changes:
+
+```bash
+$ git commit -a -m "feat(new-parser): introduces a new parsing library
+BREAKING CHANGE: new library does not support foo-construct"
+```
+other changes:
+
+You decide, e.g., docs, chore, etc.
+
+```bash
+$ git commit -a -m "docs: fixed up the docs a bit"
+```
 
 ## CSS/LESS相关
 * 样式文件统一使用less， 原来使用sass（scss）、css的一律改为less
