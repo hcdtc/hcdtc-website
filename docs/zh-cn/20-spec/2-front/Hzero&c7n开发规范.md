@@ -1,4 +1,5 @@
 # 目的
+
 出于加快开发流程，提高代码质量，减少不必要的沟通和方便维护代码等目的，制定用于Hzero & Choerodon-UI 集成前端的开发规范。
 以下主要关注于集成项目的一些规范开发说明，与Hzero 规范冲突时遵循此规范，Hzero 项目前端开发准备工作参考：
 [HZERO 前端开发规范](http://hzerodoc.saas.hand-china.com/zh/docs/development-specification/font-development-specification/](http://hzerodoc.saas.hand-china.com/zh/docs/development-specification/font-development-specification)
@@ -65,7 +66,9 @@
  ```
 
 # 代码规范
+
 ## 基本风格
+
 * 对复杂页面上，根据逻辑或位置块进行组件划分，不仅方便后期改造，定位bug，还能优化性能，不要把过多的代码全部写在一个文件里，或者写在一个方法里
 * 页面组件，工具函数都放在本页面目录下，除了一些跨页面使用组件或公用组件，尽量达到“一个目录一个页面，可迁移可删除”的目的
 * 使用async/await处理异步处理，如果要处理一些可能会出现的错误，使用try-catch进行包裹
@@ -88,12 +91,15 @@ const classString = classNames(`${prefixCls}-form-editor`, {
 * 提供的lint（Eslint 、 styleLint）处理代码
 * 必须配置husky进行检查，以在commit前触发代码检查，不通过的代码将无法提交
 * URL参数命名注意不要与层级参数organizationId，id，type，name等同名
+
 ## 命名规范
+
 * 文件夹命名一律小写，使用-来连接（不用驼峰）
 * DataSetProps 文件以 DS 为后缀
 * 页面以 Page 为后缀
 * 组件以对应组件名为后缀
 * 函数命名
+
 >能够表明这个函数的用处。
 
 ```
@@ -152,6 +158,7 @@ modalVisible: false
   />
 ```
 ## 注释规范
+
 * 头文件注释
 
 ```
@@ -217,15 +224,32 @@ $ git commit -a -m "docs: fixed up the docs a bit"
 ```
 
 ## CSS/LESS相关
+
 * 样式文件统一使用less， 原来使用sass（scss）、css的一律改为less
 * 所有颜色值使用变量，尤其是主题色或主题色相关的，必须使用@primary-color方便后期进行主题替换
 * 所有px单位改为rem，计算方式为px/100
 * css禁止使用html元素选择器，允许子选择器使用html选择器
 * 覆盖ui库的样式时，需要引入@c7n-prefix或@c7n-pro-prefix变量
+
 ## Table
+
 * 可编辑表格新建触发添加行加在第一行
 * 表格行内操作按钮使用 commands 属性，其余情况可使用 rerender 处理
+* 表格查询字段，自定义查询组件，使用 queryFields 属性
+    用法：
+    ```js            
+    <Table
+      buttons={this.buttons}
+      dataSet={this.ds}
+      columns={this.columns}
+      queryFields={{
+        queryFieldName: ReactNode,
+      }}
+    />
+    ```
+    
 ## DataSet
+
 * events 事件处理
   * 事件涉及业务逻辑较多，代码量大时单独文件处理
   * 代码量少，事件置于 DataSet 文件内或界面实例处均可
@@ -238,7 +262,7 @@ $ git commit -a -m "docs: fixed up the docs a bit"
 {
     dataKey: null,
     transport: {
-      read: {
+      read: { 
         url: `/lc/v1/organizations/${orgId}/view/${code}`,
         method: 'get',
       },
@@ -246,6 +270,7 @@ $ git commit -a -m "docs: fixed up the docs a bit"
 }
 ```
 ## Form
+
 * 涉及头行结构表单保存时，isModify 方法 noCascade 确认参数，默认是会校验行
 * const result = await ds.submit();  如果result为undedined，就是没有数据变更
 
