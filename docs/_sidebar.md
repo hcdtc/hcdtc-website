@@ -20,6 +20,8 @@
             - [ASYNC](zh-cn/20-spec/2-front/开发规范-ASYNC)
     - [后端开发规范](zh-cn/20-spec/3-back)
         - [API规范](zh-cn/20-spec/3-back/API规范)
+        - [日志规范](zh-cn/20-spec/3-back/日志规范)
+        - [异常规范](zh-cn/20-spec/3-back/异常规范)
 - [开发手册](zh-cn/30-manual)
     - [前端开发手册](zh-cn/30-manual/1-front)
         - [前端开发技术栈](zh-cn/30-manual/1-front/前端开发技术栈)
